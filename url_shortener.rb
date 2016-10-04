@@ -89,7 +89,7 @@ post '/' do
     # insert the new url into the database
     urls.execute 'INSERT INTO URLS VALUES(:shortened, :url)', shortened, url
 
-    # nice output
+    # nice output 👌
     "Your shortened url is <a href=#{shortened}>bthl.es/#{shortened}</a>"
   rescue SQLite3::Exception => e
     puts e
